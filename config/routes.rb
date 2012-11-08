@@ -1,4 +1,6 @@
 Tf::Application.routes.draw do
+  resources :cities
+
   resources :states
 
   # The priority is based upon order of creation:
