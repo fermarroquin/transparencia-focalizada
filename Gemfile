@@ -42,3 +42,9 @@ gem 'haml-rails'
 gem 'therubyracer'
 gem 'less-rails' # Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem 'twitter-bootstrap-rails'
+
+gem 'meta_search'
+gem 'will_paginate', '~> 3.0'
+
+# Fix for paginations bootstrap styles
+gem 'bootstrap-will_paginate'

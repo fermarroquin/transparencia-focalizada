@@ -2,7 +2,9 @@ class StatesController < ApplicationController
   # GET /states
   # GET /states.json
   def index
-    @states = State.all
+    
+    @search = State.search(params[:search])
+    @states = @search.paginate(:page => params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
