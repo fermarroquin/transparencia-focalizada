@@ -1,4 +1,4 @@
-class CitiesController < ApplicationController
+class Admin::CitiesController < AdminController
   
   before_filter :get_states, :except => [:index, :show, :destroy]
                 
@@ -50,7 +50,7 @@ class CitiesController < ApplicationController
 
     respond_to do |format|
       if @city.save
-        format.html { redirect_to @city, notice: 'City was successfully created.' }
+        format.html { redirect_to admin_city_path(@city), notice: 'City was successfully created.' }
         format.json { render json: @city, status: :created, location: @city }
       else
         format.html { render action: "new" }
@@ -66,7 +66,7 @@ class CitiesController < ApplicationController
 
     respond_to do |format|
       if @city.update_attributes(params[:city])
-        format.html { redirect_to @city, notice: 'City was successfully updated.' }
+        format.html { redirect_to admin_city_path(@city), notice: 'City was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -82,7 +82,7 @@ class CitiesController < ApplicationController
     @city.destroy
 
     respond_to do |format|
-      format.html { redirect_to cities_url }
+      format.html { redirect_to admin_cities_path }
       format.json { head :no_content }
     end
   end

@@ -1,7 +1,9 @@
 Tf::Application.routes.draw do
-  resources :cities
-
-  resources :states
+  
+  namespace :admin do
+    resources :cities
+    resources :states
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

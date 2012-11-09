@@ -1,4 +1,4 @@
-= form_for @city, :validate => true, :html => { :class => 'form-horizontal' } do |f|
+= form_for [:admin, @city], :validate => true, :html => { :class => 'form-horizontal' } do |f|
   .control-group
     = f.label :state_id, :class => 'control-label'
     .controls
@@ -9,4 +9,4 @@
       = f.text_field :name, :class => 'text_field'
   .form-actions
     = f.submit nil, :class => 'btn btn-primary'
-    = link_to t('.cancel', :default => t("helpers.links.cancel")), cities_path, :class => 'btn'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), admin_cities_path, :class => 'btn'
