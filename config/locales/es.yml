@@ -138,6 +138,7 @@ es:
       back: Regresar
       cancel: Cancelar
     titles:
+      new: Nuevo %{model}
       edit: Editar %{model}
     actions: Acciones
   number:
@@ -207,8 +208,8 @@ es:
     errors:
       <<: *errors
     models:
-      state: Departamentos
-      city: Municipios
+      state: Departamento
+      city: Municipio
     attributes:
       state:
         name: Nombre

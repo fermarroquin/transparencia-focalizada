@@ -4,6 +4,9 @@ class State < ActiveRecord::Base
   # Associations
   has_many :cities
   
+  # Validations
+  validates :name, :presence => true
+  
   # Will paginate uses this method
   # to know how many rows to show
   #
