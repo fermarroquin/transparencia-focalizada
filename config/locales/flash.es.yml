@@ -1,0 +1,27 @@
+es:
+  flash_messages:
+    #
+    # These are the translations for the different headings.
+    #
+    headings:
+      success: 'Éxito!'
+      info: 'Información!'
+      warning: 'Advertencia!'
+      error: 'Error!'
+
+    admin:
+      cities:
+        create:
+          success: 'Municipio creado correctamente'
+          error: 'Algo salió mal'
+        update:
+          success: 'Municipio actualizado correctamente'
+          error: 'Algo salió mal'
+      states:
+        create:
+          success: 'Departamento creado correctamente'
+          error: 'Algo salió mal'
+        update:
+          success: 'Departamento actualizado correctamente'
+          error: 'Algo salió mal'
+    

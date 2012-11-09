@@ -1,7 +1,6 @@
 class Admin::CitiesController < AdminController
   
-  before_filter :get_states, :except => [:index, :show, :destroy]
-                
+  before_filter :get_states, :only => [:new, :create, :edit, :update]                
   
   # GET /cities
   # GET /cities.json
@@ -50,10 +49,10 @@ class Admin::CitiesController < AdminController
 
     respond_to do |format|
       if @city.save
-        format.html { redirect_to admin_city_path(@city), notice: 'City was successfully created.' }
+        format.html { redirect_to admin_city_path(@city), :flash => :success }
         format.json { render json: @city, status: :created, location: @city }
       else
-        format.html { render action: "new" }
+        format.html { render action: :new }
         format.json { render json: @city.errors, status: :unprocessable_entity }
       end
     end
@@ -66,10 +65,10 @@ class Admin::CitiesController < AdminController
 
     respond_to do |format|
       if @city.update_attributes(params[:city])
-        format.html { redirect_to admin_city_path(@city), notice: 'City was successfully updated.' }
+        format.html { redirect_to admin_city_path(@city), :flash => :success }
         format.json { head :no_content }
       else
-        format.html { render action: "edit" }
+        format.html { render action: :edit }
         format.json { render json: @city.errors, status: :unprocessable_entity }
       end
     end

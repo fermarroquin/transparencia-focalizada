@@ -47,7 +47,7 @@ class Admin::StatesController < AdminController
 
     respond_to do |format|
       if @state.save
-        format.html { redirect_to admin_state_path(@state), notice: 'State was successfully created.' }
+        format.html { redirect_to admin_state_path(@state), :flash => :success }
         format.json { render json: @state, status: :created, location: @state }
       else
         format.html { render action: "new" }
@@ -63,7 +63,7 @@ class Admin::StatesController < AdminController
 
     respond_to do |format|
       if @state.update_attributes(params[:state])
-        format.html { redirect_to admin_state_path(@state), notice: 'State was successfully updated.' }
+        format.html { redirect_to admin_state_path(@state), :flash => :success }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

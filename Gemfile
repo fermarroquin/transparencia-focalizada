@@ -48,6 +48,8 @@ gem 'will_paginate', '~> 3.0'
 
 # Fix for paginations bootstrap styles
 gem 'bootstrap-will_paginate'
-
 # Gem to show error messages using javascript
 gem 'client_side_validations'
+
+# Standardizing locales for flash messages
+gem 'bootstrap_flash_messages'
