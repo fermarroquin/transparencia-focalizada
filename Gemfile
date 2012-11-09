@@ -53,3 +53,6 @@ gem 'client_side_validations'
 
 # Standardizing locales for flash messages
 gem 'bootstrap_flash_messages'
+
+# Nice look for confirm dialogs
+gem 'twitter-bootstrap-rails-confirm'
