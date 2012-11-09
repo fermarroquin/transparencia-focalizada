@@ -1,4 +1,4 @@
-= form_for @city, :html => { :class => 'form-horizontal' } do |f|
+= form_for @city, :validate => true, :html => { :class => 'form-horizontal' } do |f|
   .control-group
     = f.label :state_id, :class => 'control-label'
     .controls
