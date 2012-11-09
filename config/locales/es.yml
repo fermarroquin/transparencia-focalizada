@@ -210,11 +210,14 @@ es:
     models:
       state: Departamento
       city: Municipio
+      role: Rol
     attributes:
       state:
         name: Nombre
       city:
         state_id: Departamento
+        name: Nombre
+      role:
         name: Nombre
   
   will_paginate:

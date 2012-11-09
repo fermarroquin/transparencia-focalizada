@@ -1,8 +1,11 @@
 Tf::Application.routes.draw do
   
+  devise_for :users
+
   namespace :admin do
     resources :cities
     resources :states
+    resources :roles
   end
 
   # The priority is based upon order of creation:

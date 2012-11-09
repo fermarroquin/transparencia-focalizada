@@ -24,4 +24,10 @@ es:
         update:
           success: 'Departamento actualizado correctamente'
           error: 'Algo salió mal'
-    
+      roles:
+        create:
+          success: 'Rol creado correctamente'
+          error: 'Algo salió mal'
+        update:
+          success: 'Rol actualizado correctamente'
+          error: 'Algo salió mal'
