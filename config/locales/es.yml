@@ -135,6 +135,10 @@ es:
       destroy: Eliminar
       edit: Editar
       new: Nuevo
+      back: Regresar
+      cancel: Cancelar
+    titles:
+      edit: Editar %{model}
     actions: Acciones
   number:
     currency:

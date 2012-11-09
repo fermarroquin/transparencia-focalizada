@@ -5,7 +5,7 @@
 %p
   %strong= model_class.human_attribute_name(:state_id) + ':'
   %br
-  = @city.state_id
+  = @city.state.name unless @city.state.nil?
 %p
   %strong= model_class.human_attribute_name(:name) + ':'
   %br

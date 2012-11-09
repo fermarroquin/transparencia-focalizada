@@ -1,4 +1,8 @@
 class CitiesController < ApplicationController
+  
+  before_filter :get_states, :except => [:index, :show, :destroy]
+                
+  
   # GET /cities
   # GET /cities.json
   def index
@@ -81,5 +85,9 @@ class CitiesController < ApplicationController
       format.html { redirect_to cities_url }
       format.json { head :no_content }
     end
+  end
+  
+  def get_states
+    @states = State.all
   end
 end
