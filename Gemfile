@@ -56,3 +56,9 @@ gem 'bootstrap_flash_messages'
 
 # Nice look for confirm dialogs
 gem 'twitter-bootstrap-rails-confirm'
+
+# CanCan is an authorization library
+gem 'cancan'
+
+# Authentication solution
+gem 'devise'

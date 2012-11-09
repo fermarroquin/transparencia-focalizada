@@ -3,6 +3,9 @@ Tf::Application.routes.draw do
   devise_for :users
 
   namespace :admin do
+    
+    root :to => 'cities#index'
+    
     resources :cities
     resources :states
     resources :roles
