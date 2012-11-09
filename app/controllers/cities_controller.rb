@@ -2,7 +2,9 @@ class CitiesController < ApplicationController
   # GET /cities
   # GET /cities.json
   def index
-    @cities = City.all
+
+    @search = City.search(params[:search])
+    @cities = @search.paginate(:page => params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
